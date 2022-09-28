@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <!--this is for the the whole page-->
+    <div class="container">
+        <!--this is for the top part-->
+        <header>
+            <a href="#" class="logo-image"><img src="logo.png" class="logo"></a>
+            <div class="bar">
+                <ul class="sidebar">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+            <!-- this is the icon of the close and open bar used for the design of the phone -->
+            <div class="close-btn">
+                <span  class="material-icons-sharp menu">menu</span>
+                <span  class="material-icons-sharp close">close</span>
+            </div>
+            </div>
+             
+        </header>
+        
+        <!-- this is fir the second part of the page -->
+        <div class="content">
+            <div class="text">
+                <h2>iphone 13 pro max</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto quod recusandae itaque consectetur molestias accusantium quisquam delectus neque facere tempore voluptatem corporis soluta ea quos, reprehenderit sit eius eaque voluptas.</p>
+                <a href="#">All Products</a>    
+            </div>
+            <div class="image">
+                <img class="main_photo" src="0.png" alt="">
+            </div>
+        </div>
+        <!-- this is the last part of the page -->
+        <div class="icons">
+            <!-- we just add the event onclick to change the main photo and also the background -->
+            <img onclick="phones(this.src);colors('#000')"  src="0.png" alt="">
+            <img onclick="phones(this.src);colors('#247ec8')"  src="1.png" alt="">
+            <img onclick="phones(this.src);colors('#1e1e1e')"  src="2.png" alt="">
+            <img onclick="phones(this.src);colors('#c79b53')"  src="3.png" alt="">
+            <img onclick="phones(this.src);colors('#c82525')"  src="4.png" alt="">
+        </div>
+    </div>
+
+
+
+
+    <script src="landing.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/*this is used for a whole of page*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+/*styling the page*/
+.container{
+    background: #247ec8;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/*styling the top of the page which is the navbar and the logo*/
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    align-items: center;/*to make them in the same line*/
+    padding: 20px 0;
+}
+
+/*styling the logo*/
+.logo{
+    width: 40px;
+}
+/*styling the navbar*/
+ul li{
+    display: inline-block;
+}
+ul li a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.7s;
+}
+ul li a:hover{
+    font-size: 20px;
+    text-decoration: underline overline;
+    color: #000;
+}
+/*hide the close bar*/
+.close-btn{
+    display: none;
+}
+/*styling the secondpart which is the content of the product*/
+.content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+/*styling the text wich describe the product*/
+.content .text{
+    width: 40%; /*for minimize the width of the text*/
+    color:#fff;
+}
+.content .text h2{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.content .text p{
+    font-size: 18px;
+    margin: 20px 0;
+}
+.content .text a{
+    text-decoration: none;
+    background: white;
+    color: #000;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+.content .image{
+    width: 30%;
+}
+.content .image img{
+    width: 180px;
+}
+/*styling the last page*/
+.icons{
+    position: absolute;/*it will chage the position according with it's fother wich is the div of container*/
+    bottom: 0;
+    /*this is to make the photos in the middle of the page*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.icons img{
+    width: 40px;
+    /*to make the hover slow*/
+    transition: 0.5s;
+}
+.icons img:hover{
+    /*change some style when we mouse up on the img*/
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/*this is for phones*/
+@media (max-width:550px){
+    /*hide the image which is on the middle*/
+    .image{
+        display: none;
+    }
+    /*make  images of phones and the content on the middle*/
+    .icons,.content{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    /*make the text big*/
+    .content .text{
+        width: 80%;
+    }
+    
+}
+/*this is for small phones*/
+@media (max-width:540px){
+    /*display the icon of the menu*/
+    .close-btn{
+        display: block;
+    }
+    header{
+        margin-top: 0px;
+    }
+    header .bar{
+        background: rgb(39, 11, 197);
+        transform: translateY(2px);
+        margin-bottom: 0;
+        padding-bottom: 0;
+        /*hide the navbar*/
+        display: flex;
+    }
+    header .sidebar{
+        display: none;
+        z-index: 1;
+    }
+    header .sidebar li{
+        display: block;
+        /*for make space between lines*/
+        line-height: 25px;
+    }
+    .close{
+        display: none;
+    }
+    .content .text{
+        /*make the text of the content on the middle*/
+        transform: translateX(30px);
+    }
+    ul li a:hover{
+        text-decoration: underline;
+    }
+}
